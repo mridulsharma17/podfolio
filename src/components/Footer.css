@@ -1,0 +1,44 @@
+.footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--card-border);
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.copyright {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.credit {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.heart {
+  color: var(--primary-color);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); text-shadow: 0 0 10px var(--primary-color); }
+  100% { transform: scale(1); }
+}

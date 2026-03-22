@@ -1,0 +1,83 @@
+.about-section {
+  position: relative;
+}
+
+.about-glass-card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle inner glow for the glass card */
+.about-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.8), transparent);
+}
+
+@media (min-width: 992px) {
+  .about-glass-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 4rem;
+  }
+}
+
+.about-text-content {
+  flex: 1.5;
+  font-size: 1.15rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.about-text-content p {
+  margin-bottom: 1.5rem;
+}
+
+.about-text-content strong {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+.counters-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.counter-item {
+  text-align: center;
+}
+
+.counter-value {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #a78bfa, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.counter-label {
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}

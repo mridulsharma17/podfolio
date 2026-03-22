@@ -1,0 +1,128 @@
+.experience-section {
+  position: relative;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--primary-color), var(--accent-color), transparent);
+}
+
+@media (min-width: 768px) {
+  .timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 6rem;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .timeline-item {
+    width: 50%;
+    padding-left: 0;
+  }
+  
+  .timeline-item.left {
+    padding-right: 4rem;
+    left: 0;
+  }
+  
+  .timeline-item.right {
+    padding-left: 4rem;
+    left: 50%;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background: var(--nav-bg);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .timeline-dot {
+    left: auto;
+    transform: none;
+    margin-left: 0;
+  }
+
+  .timeline-item.left .timeline-dot {
+    right: -1.5rem;
+    left: auto;
+  }
+
+  .timeline-item.right .timeline-dot {
+    left: -1.5rem;
+    right: auto;
+  }
+}
+
+.timeline-content {
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: var(--glow-shadow);
+}
+
+.timeline-date {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-family: monospace;
+  color: var(--primary-hover);
+  background: rgba(139, 92, 246, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content h4 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.timeline-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
